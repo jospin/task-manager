@@ -3,10 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import {TasksService} from './shared';
+import { ListTaskComponent } from './list';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ListTaskComponent
+  ],
   imports: [
     CommonModule,
     RouterModule
