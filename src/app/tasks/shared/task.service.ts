@@ -5,7 +5,7 @@ import { Task } from './';
 @Injectable({
   providedIn: 'root'
 })
-export class TasksService {
+export class TaskService {
 
   constructor() { }
 

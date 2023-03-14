@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import {TasksService} from './shared';
+import {TaskService} from './shared';
 import { ListTaskComponent } from './list';
 
 
@@ -15,7 +15,7 @@ import { ListTaskComponent } from './list';
     RouterModule
   ],
   providers: [
-    TasksService  
+    TaskService  
   ]
 })
 export class TasksModule { }
