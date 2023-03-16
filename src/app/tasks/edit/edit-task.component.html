@@ -1,0 +1,43 @@
+<h1>Edit task: [(ngModel)]="task.name"</h1>
+
+<div class="well">
+  <form #formTask="ngForm">
+    <div class="form-group">
+      <label for="name">Task:</label>
+      <input 
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        [(ngModel)]="task.name"
+        #name="ngModel"
+        minlength="5" 
+        required> 
+      <div *ngIf="name.errors && (name.dirty || name.touched)"
+      class="alert alert-danger">
+        <div [hidden]="!name.errors.required">
+          Enter the task
+        </div>
+        <div [hidden]="!name.errors.minlength">
+          Tha task have been 5 caracters.
+        </div>
+      </div>
+    </div>
+    <div class="form-group text-center">
+      <input 
+        type="submit"
+        (click)="update()"
+        class="btn btn-success"
+        [disabled]="!formTask.form.valid"
+        value="Update">
+      <a 
+      	[routerLink]="['/task']"
+        class="btn btn-default">
+        <span class="glyphicon glyphicon-chevron-left" 
+          aria-hidden="true"></span> Go back
+      </a>
+    </div>
+  </form>
+</div>
+
+
