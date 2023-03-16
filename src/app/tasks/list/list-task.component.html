@@ -7,6 +7,7 @@
 			<th>Completed</th>
 			<th class="text-center">
 			<a 
+			[routerLink]="['/task/create']"
 			class="btn btn-xs btn-success">
 				<span class="glyphicon glyphicon-plus" 
 				aria-hidden="true"></span> New
@@ -16,8 +17,8 @@
 	</thead>
 	<tbody *ngIf="tasks.length>0">
 		<tr *ngFor="let task of tasks">
-			<td>
-				task.name
+			<td [class.success]="!task.completed">
+				{{ task.name }}
 			</td>
 			<td style="width: 70px" class="text-center">
 				<input 

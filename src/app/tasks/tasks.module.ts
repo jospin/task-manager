@@ -6,12 +6,14 @@ import { FormsModule } from '@angular/forms';
 import {TaskService} from './shared';
 import { ListTaskComponent } from './list';
 import { EditTaskComponent } from './edit';
+import { CreateTaskComponent } from './create';
 
 
 @NgModule({
   declarations: [
     ListTaskComponent,
-    EditTaskComponent
+    EditTaskComponent,
+    CreateTaskComponent
   ],
   imports: [
     CommonModule,
