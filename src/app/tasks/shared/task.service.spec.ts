@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TasksService } from './tasks.service';
+import { TaskService } from './task.service';
 
-describe('TasksService', () => {
+describe('TaskService', () => {
   let service: TasksService;
 
   beforeEach(() => {

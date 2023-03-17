@@ -5,9 +5,13 @@ import { Task } from './';
 @Injectable({
   providedIn: 'root'
 })
-export class TasksService {
+export class TaskService {
 
-  constructor() { }
+  constructor() { 
+    // const task = new Task(null, "Tarefa #1", false);
+    // this.create(task);
+
+  }
 
   listAll(): Task[] {
     const tasks = localStorage['tasks'];
